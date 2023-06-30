@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-strong-cyan: hsl(172, 67%, 45%);
+    --neutral-very-dark-cyan: hsl(183, 100%, 15%);
+    --neutral-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --neutral-grayish-cyan: hsl(184, 14%, 56%);
+    --neutral-light-grayish-cyan: hsl(185, 41%, 84%);
+    --neutral-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--neutral-light-grayish-cyan);
+}
+
+h2 {
+    font-size: 1rem;
+    color: var(--neutral-dark-grayish-cyan);
+}
+
+p {
+    font-size: 0.8125rem;
+    color: hsla(183, 15%, 56%, 1);
+}
+
+input {
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    background-color: var(--neutral-very-light-grayish-cyan);
+    border: 0;
+    border-radius: 5px;
+    text-align: right;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    height: 3rem;
+    width: 100%;
+    color: var(--neutral-very-dark-cyan);
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: hsla(180, 18%, 40%, 1);
+    opacity: 0.35;
+}
+
+input:focus {
+    border-radius: 5px;
+    border: 2px solid var(--primary-strong-cyan);
+    outline: none;
+}
+
+button {
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    color: var(--neutral-white);
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--neutral-very-dark-cyan);
+    height: 3rem;
+    cursor: pointer;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 5.5rem auto;
+}
+
+.calculator {
+    background-color: var(--neutral-white);
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+    max-width: 920px;
+    border-radius: 25px;
+    box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.20);
+    margin: auto 2rem;
+}
+
+.form-container {
+    padding: 1rem;
+    width: 379px;
+}
+
+.label {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-input {
+    position: relative;
+    margin-top: 0.375rem;
+    width: 100%;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.tip-container {
+    margin-top: 2.5rem;
+    margin-bottom: 2.875rem;
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.875rem;
+    margin-top: 1rem;
+}
+
+.custom {
+    width: 100%;
+}
+
+.custom::placeholder {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.result-container {
+    padding: 2.5rem;
+    width: 417px;
+    background-color: var(--neutral-very-dark-cyan);
+    border-radius: 15px;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result h2 {
+    color: var(--neutral-white);
+}
+
+.price {
+    font-size: 3rem;
+    color: var(--primary-strong-cyan);
+}
+
+.reset {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--neutral-very-dark-cyan);
+    background-color: hsla(183, 78%, 24%, 1);
+    width: 100%;
+    cursor: not-allowed;
+}
+
+.btn-active {
+    background-color: var(--primary-strong-cyan);
+    color: var(--neutral-very-dark-cyan);
+    cursor: pointer !important;
+}
+
+.btn-active:hover {
+    color: var(--neutral-very-dark-cyan);
+    background-color: hsla(172, 61%, 77%, 1);
+}
+
+.tipButton:hover {
+    color: var(--neutral-very-dark-cyan);
+    background-color: hsla(172, 61%, 77%, 1);
+}
+
+.input-error {
+    border-radius: 5px;
+    border: 2px solid hsla(13, 70%, 60%, 1) !important;
+    outline: none;
+}
+
+.error {
+    color: hsla(13, 70%, 60%, 1);
+    display: none;
+}

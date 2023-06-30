@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <div class="main-container">
+    <img src="./images/logo.svg" alt="logo" class="logo">
+    <div class="calculator">
+      <div class="form-container">
+        <div class="label">
+          <h2> Bill</h2>
+          <h2 class="error">Can't be zero</h2>
+        </div>
+        <div class="form-input">
+          <div class="input-container">
+            <input type="number" placeholder="0" id="billInput" maxlength="20">
+            <img src="./images/icon-dollar.svg" alt="icon-dollar" class="icon">
+          </div>
+        </div>
+        <div class="tip-container">    
+          <div class="label">
+            <h2>Select Tip %</h2>
+          </div>
+          <div class="tips">
+            <button class="tipButton">5%</button>
+            <button class="tipButton">10%</button>
+            <button class="tipButton">15%</button>
+            <button class="tipButton">25%</button>
+            <button class="tipButton">50%</button>
+            <input type="text" class="custom" placeholder="Custom" id="customTipInput" maxlength="3">
+          </div>
+        </div>
+        <div class="label">
+          <h2>Number of People</h2>
+          <h2 class="error">Can't be zero</h2>
+        </div>
+        <div class="form-input">
+          <div class="input-container">
+            <input type="text" placeholder="0" id="peopleInput"  maxlength="20">
+            <img src="./images/icon-person.svg" alt="icon-person" class="icon">
+          </div>
+        </div>        
+      </div>
+      <div class="result-container">
+        <div class="results">
+          <div class="result">
+            <div class="heading">
+              <h2>Tip amount</h2>
+              <p>/ person</p>
+            </div>
+            <p class="price">$<span id="tip">0.00</span></p>
+          </div>
+          <div class="result">
+            <div class="heading">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <p class="price">$<span id="total">0.00</span></p>
+          </div>
+        </div>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+<script src="./main.js"></script>
+</body>
+</html>
